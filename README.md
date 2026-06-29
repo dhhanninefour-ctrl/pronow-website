@@ -31,7 +31,7 @@
 
 ## ✅ 현재 배포 상태 (이미 라이브)
 
-- **라이브 주소:** https://pronow-website.vercel.app/
+- **라이브 주소:** https://pronowsportsagency.vercel.app/
 - **GitHub 저장소:** https://github.com/dhhanninefour-ctrl/pronow-website
 - **Vercel 프로젝트:** `pronow-website`
 - **자동 배포:** 이 저장소에 `git push` 하면 **Vercel이 자동으로 빌드·배포**합니다.
@@ -43,7 +43,7 @@ git add .
 git commit -m "수정 내용"
 git push
 ```
-→ 잠시 뒤 라이브 주소(https://pronow-website.vercel.app/)에 자동 반영.
+→ 잠시 뒤 라이브 주소(https://pronowsportsagency.vercel.app/)에 자동 반영.
 
 ---
 
