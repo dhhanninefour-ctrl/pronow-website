@@ -6,6 +6,7 @@
   --ok:#3ad29f; --err:#ff6b6b;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important} /* make the hidden attribute win over .loading/.auth-wrap display rules */
 html,body{margin:0}
 body{
   font-family:"Pretendard",system-ui,-apple-system,sans-serif;
