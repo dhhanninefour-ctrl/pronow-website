@@ -176,17 +176,17 @@
 
       <div class="svc-grid">
         <article class="svc-card reveal">
-          <div class="svc-icon">🤝</div>
+          <div class="svc-icon" data-icon="svc1">🤝</div>
           <h3 data-i18n="svc.s1.t">선수 매니지먼트</h3>
           <p data-i18n="svc.s1.d">스폰서십 체결과 선수 활동 전반을 관리합니다.</p>
         </article>
         <article class="svc-card reveal">
-          <div class="svc-icon">🎾</div>
+          <div class="svc-icon" data-icon="svc2">🎾</div>
           <h3 data-i18n="svc.s2.t">테니스 이벤트 기획·진행</h3>
           <p data-i18n="svc.s2.d">대회·클래스·행사를 기획하고 현장을 운영합니다.</p>
         </article>
         <article class="svc-card reveal">
-          <div class="svc-icon">📡</div>
+          <div class="svc-icon" data-icon="svc3">📡</div>
           <h3 data-i18n="svc.s3.t">SNS · YOUTUBE 온라인 마케팅</h3>
           <p data-i18n="svc.s3.d">롱폼·숏츠·릴스로 브랜드를 지속 노출·확산합니다.</p>
         </article>
@@ -310,8 +310,8 @@
       </div>
 
       <div class="contact-social reveal">
-        <a href="https://www.instagram.com/pronowsportsagency" class="social-link" target="_blank" rel="noopener">Instagram</a>
-        <a href="#" class="social-link social-link-pending" aria-disabled="true" title="준비 중">YouTube</a>
+        <a href="https://www.instagram.com/pronowsportsagency" class="social-link" data-social="instagram" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" class="social-link social-link-pending" data-social="youtube" aria-disabled="true" title="준비 중">YouTube</a>
       </div>
       <p class="contact-note" data-i18n="contact.note">※ 유튜브 채널과 대표번호는 확정되는 대로 연결됩니다.</p>
     </div>
@@ -331,7 +331,10 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/cms.js"></script>
 </body>
 </html>

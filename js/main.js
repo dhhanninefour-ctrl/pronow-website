@@ -66,6 +66,7 @@
       const url = "assets/images/" + name + "." + EXTS[i++];
       const img = new Image();
       img.onload = () => {
+        if (el.dataset.cmsImg) return; // a CMS-uploaded image already won this slot
         el.style.backgroundImage = "url('" + url + "')";
         el.classList.add("has-img");
       };

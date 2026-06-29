@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>PRONOW 관리자 · 홈페이지 편집</title>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <header class="admin-top">
+    <a class="admin-brand" href="../index.html">PRONOW <small>관리자</small></a>
+    <div class="admin-top-actions" id="topActions" hidden>
+      <a class="ghost-link" href="../index.html" target="_blank" rel="noopener">사이트 보기 ↗</a>
+      <button type="button" class="btn ghost" id="logoutBtn">로그아웃</button>
+    </div>
+  </header>
+
+  <!-- ===== LOGIN ===== -->
+  <main class="auth-wrap" id="loginPanel" hidden>
+    <div class="card auth-card">
+      <h1>관리자 로그인</h1>
+      <p class="muted">홈페이지를 편집하려면 로그인하세요.</p>
+      <label>이메일
+        <input type="email" id="loginEmail" autocomplete="username" placeholder="pronow25@gmail.com" />
+      </label>
+      <label>비밀번호
+        <input type="password" id="loginPassword" autocomplete="current-password" placeholder="비밀번호" />
+      </label>
+      <button type="button" class="btn primary" id="loginBtn">로그인</button>
+      <button type="button" class="linkbtn" id="forgotBtn">비밀번호를 잊으셨나요?</button>
+      <p class="msg" id="loginMsg" role="status"></p>
+    </div>
+  </main>
+
+  <!-- ===== RECOVERY (set new password after email link) ===== -->
+  <main class="auth-wrap" id="recoveryPanel" hidden>
+    <div class="card auth-card">
+      <h1>새 비밀번호 설정</h1>
+      <p class="muted">이메일로 받은 링크로 접속하셨습니다. 새 비밀번호를 입력하세요.</p>
+      <label>새 비밀번호 (6자 이상)
+        <input type="password" id="recoveryPassword" autocomplete="new-password" />
+      </label>
+      <button type="button" class="btn primary" id="recoverySaveBtn">비밀번호 변경</button>
+      <p class="msg" id="recoveryMsg" role="status"></p>
+    </div>
+  </main>
+
+  <!-- ===== EDITOR ===== -->
+  <main class="editor" id="editorPanel" hidden>
+    <nav class="tabs" id="tabs">
+      <button type="button" class="tab is-active" data-tab="text">📝 글자</button>
+      <button type="button" class="tab" data-tab="images">🖼️ 사진</button>
+      <button type="button" class="tab" data-tab="links">🔗 링크</button>
+      <button type="button" class="tab" data-tab="icons">✨ 아이콘</button>
+      <button type="button" class="tab" data-tab="account">🔒 계정</button>
+    </nav>
+
+    <section class="panel is-active" id="panel-text" data-panel="text">
+      <p class="hint">아래에서 홈페이지 글자를 한국어/영어로 수정할 수 있습니다. 비워두면 기본 문구가 표시됩니다.</p>
+      <div id="textGroups"></div>
+    </section>
+
+    <section class="panel" id="panel-images" data-panel="images">
+      <p class="hint">사진을 클릭해 새 이미지를 올리면 교체됩니다. (jpg/png, 권장 1MB 이하)</p>
+      <div class="img-grid" id="imageGrid"></div>
+    </section>
+
+    <section class="panel" id="panel-links" data-panel="links">
+      <p class="hint">문의 이메일과 SNS 주소를 수정합니다. 유튜브를 비워두면 '준비 중'으로 표시됩니다.</p>
+      <label>문의 이메일 <input type="text" id="link-email" placeholder="pronow25@gmail.com" /></label>
+      <label>Instagram 주소 <input type="text" id="link-instagram" placeholder="https://www.instagram.com/..." /></label>
+      <label>YouTube 주소 <input type="text" id="link-youtube" placeholder="https://www.youtube.com/@... (비우면 준비 중)" /></label>
+    </section>
+
+    <section class="panel" id="panel-icons" data-panel="icons">
+      <p class="hint">서비스 카드의 아이콘(이모지)을 바꿀 수 있습니다. 예: 🤝 🎾 📡 🏆 📈 🎥</p>
+      <label>아이콘 1 (선수 매니지먼트) <input type="text" id="icon-svc1" maxlength="4" /></label>
+      <label>아이콘 2 (테니스 이벤트) <input type="text" id="icon-svc2" maxlength="4" /></label>
+      <label>아이콘 3 (온라인 마케팅) <input type="text" id="icon-svc3" maxlength="4" /></label>
+    </section>
+
+    <section class="panel" id="panel-account" data-panel="account">
+      <p class="hint">로그인 비밀번호를 변경합니다.</p>
+      <label>새 비밀번호 (6자 이상) <input type="password" id="newPassword" autocomplete="new-password" /></label>
+      <button type="button" class="btn" id="changePwBtn">비밀번호 변경</button>
+      <p class="msg" id="pwMsg" role="status"></p>
+      <hr />
+      <p class="muted small">로그인 이메일: <strong id="acctEmail">—</strong><br />
+      이메일/아이디를 바꾸려면 Supabase 관리화면이 필요합니다. 도움이 필요하면 말씀해 주세요.</p>
+    </section>
+
+    <div class="savebar">
+      <span class="msg" id="saveMsg" role="status"></span>
+      <button type="button" class="btn primary" id="saveBtn">변경사항 저장</button>
+    </div>
+  </main>
+
+  <div class="loading" id="loading">불러오는 중…</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase-config.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
