@@ -31,8 +31,9 @@
 
 ## ✅ 현재 배포 상태 (이미 라이브)
 
-- **라이브 주소:** https://tennisuserapp.vercel.app/
+- **라이브 주소:** https://pronow-website.vercel.app/
 - **GitHub 저장소:** https://github.com/dhhanninefour-ctrl/pronow-website
+- **Vercel 프로젝트:** `pronow-website`
 - **자동 배포:** 이 저장소에 `git push` 하면 **Vercel이 자동으로 빌드·배포**합니다.
   즉, 코드를 수정하고 push만 하면 위 주소가 자동으로 갱신됩니다.
 
@@ -42,11 +43,7 @@ git add .
 git commit -m "수정 내용"
 git push
 ```
-→ 잠시 뒤 라이브 주소에 자동 반영.
-
-### 주소 이름을 바꾸고 싶다면 (tennisuserapp → 원하는 이름)
-Vercel 대시보드 → 프로젝트 → **Settings → General → Project Name** 에서 이름을 바꾸고 Save.
-(예: `pronow` 로 바꾸면 `pronow.vercel.app` 가 됩니다.)
+→ 잠시 뒤 라이브 주소(https://pronow-website.vercel.app/)에 자동 반영.
 
 ---
 
