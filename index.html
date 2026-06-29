@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- mark JS as enabled before paint so reveal-hiding only applies with JS -->
+  <script>document.documentElement.className += " js";</script>
+  <title data-i18n="meta.title">PRONOW · 프로나우 — 테니스 스포츠 마케팅 에이전시</title>
+  <meta name="description" data-i18n="meta.desc" content="프로나우(PRONOW) — 테니스 선수 전문 에이전시. 선수 매니지먼트, 스포츠 이벤트 기획·운영, 스포츠 시설 운영. 기록보다 기억에 남는 마케팅." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="PRONOW · 프로나우" />
+  <meta property="og:description" content="새로운 스포츠 마케팅의 기준 — 소통과 브랜드 경험의 결합" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#hero" class="brand" aria-label="PRONOW home">PRONOW</a>
+
+      <nav class="nav" id="primaryNav" aria-label="Primary">
+        <a href="#about" data-i18n="nav.brand">Brand</a>
+        <a href="#players" data-i18n="nav.players">Players</a>
+        <a href="#network" data-i18n="nav.network">Network</a>
+        <a href="#works" data-i18n="nav.works">Works</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" class="lang-btn is-active" data-lang="ko">KO</button>
+          <span class="lang-sep">|</span>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button type="button" class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="primaryNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" data-img="hero-court"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content reveal">
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">The Connection</p>
+      <h1 class="hero-title">
+        <span data-i18n="hero.title1">우리는 기록보다</span><br />
+        <span class="accent" data-i18n="hero.title2">기억에 남는 마케팅</span><span data-i18n="hero.title3">을 합니다.</span>
+      </h1>
+      <p class="hero-sub" data-i18n="hero.sub">새로운 스포츠 마케팅의 기준 — 테니스 전문성과 브랜드 감성의 결합.</p>
+      <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">문의하기</a>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- ===================== ABOUT / EXPERTISE ===================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <p class="section-label">Expertise Synergy</p>
+      <h2 class="section-title reveal" data-i18n="about.title">테니스 전문성과 브랜드의 감성이 만나<br />스포츠 마케팅의 패러다임을 바꿉니다.</h2>
+      <p class="section-lead reveal" data-i18n="about.lead">트렌디한 브랜드 콘텐츠 기획력을 바탕으로, 선수와 행사를 통해 브랜드를 적극적으로 노출할 수 있는 ‘테니스 홍보채널’을 제안합니다.</p>
+
+      <div class="biz-grid">
+        <article class="biz-card reveal">
+          <span class="biz-num">01</span>
+          <h3 data-i18n="about.biz1.t">선수 매니지먼트</h3>
+          <p data-i18n="about.biz1.d">국가대표 테니스 선수의 스폰서십·계약·활동을 전문적으로 관리합니다.</p>
+        </article>
+        <article class="biz-card reveal">
+          <span class="biz-num">02</span>
+          <h3 data-i18n="about.biz2.t">스포츠 이벤트 기획·운영</h3>
+          <p data-i18n="about.biz2.d">동호인 대회부터 ITF·ATP·WTA 메가 이벤트까지 기획하고 운영합니다.</p>
+        </article>
+        <article class="biz-card reveal">
+          <span class="biz-num">03</span>
+          <h3 data-i18n="about.biz3.t">스포츠 시설 운영</h3>
+          <p data-i18n="about.biz3.d">서울 전용 테니스 코트를 기반으로 브랜드와 고객의 직접 접점을 만듭니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMPANY PROFILE ===================== -->
+  <section class="section section-alt" id="profile">
+    <div class="container">
+      <p class="section-label">Company Profile</p>
+      <div class="profile-grid">
+        <div class="profile-item reveal">
+          <span class="profile-key" data-i18n="profile.name.k">회사명</span>
+          <span class="profile-val">PRONOW <em data-i18n="profile.name.v">프로나우</em></span>
+        </div>
+        <div class="profile-item reveal">
+          <span class="profile-key" data-i18n="profile.found.k">설립</span>
+          <span class="profile-val" data-i18n="profile.found.v">2025년 9월</span>
+        </div>
+        <div class="profile-item reveal">
+          <span class="profile-key" data-i18n="profile.ceo.k">대표자</span>
+          <span class="profile-val" data-i18n="profile.ceo.v">한동협</span>
+        </div>
+        <div class="profile-item reveal">
+          <span class="profile-key" data-i18n="profile.biz.k">주요사업</span>
+          <span class="profile-val profile-list">
+            <em data-i18n="profile.biz.v1">선수 매니지먼트</em>
+            <em data-i18n="profile.biz.v2">스포츠 이벤트 기획·운영</em>
+            <em data-i18n="profile.biz.v3">스포츠 시설 운영</em>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PLAYERS ===================== -->
+  <section class="section" id="players">
+    <div class="container">
+      <p class="section-label">Player Profile</p>
+      <h2 class="section-title reveal" data-i18n="players.title">프로나우와 함께하는 국가대표 선수</h2>
+      <p class="section-lead reveal" data-i18n="players.lead">선수 에이전시 경험은 테니스 전문성을 넘어, 브랜드 이미지에 맞는 선수를 매칭하는 스포츠 마케팅의 핵심입니다.</p>
+
+      <div class="players-grid">
+        <article class="player-card reveal">
+          <div class="player-photo" data-img="player-jeongyunseong"></div>
+          <h3>정윤성</h3>
+          <p class="player-team" data-i18n="players.p1.team">국군체육부대</p>
+          <p class="player-meta">1998.03.27</p>
+          <p class="player-tag" data-i18n="players.p1.tag">2025년 국가대표</p>
+        </article>
+        <article class="player-card reveal">
+          <div class="player-photo" data-img="player-parkuiseong"></div>
+          <h3>박의성</h3>
+          <p class="player-team" data-i18n="players.p2.team">대구시청</p>
+          <p class="player-meta">2000.09.27</p>
+          <p class="player-tag" data-i18n="players.p2.tag">2026년 국가대표</p>
+        </article>
+        <article class="player-card reveal">
+          <div class="player-photo" data-img="player-hanseonyong"></div>
+          <h3>한선용</h3>
+          <p class="player-team" data-i18n="players.p3.team">안성시청</p>
+          <p class="player-meta">2001.01.18</p>
+          <p class="player-tag" data-i18n="players.p3.tag">2026년 국가대표 상비군</p>
+        </article>
+        <article class="player-card reveal">
+          <div class="player-photo" data-img="player-anyujin"></div>
+          <h3>안유진</h3>
+          <p class="player-team" data-i18n="players.p4.team">충남도청</p>
+          <p class="player-meta">1997.03.13</p>
+          <p class="player-tag" data-i18n="players.p4.tag">2026년 국가대표 상비군</p>
+        </article>
+        <article class="player-card reveal">
+          <div class="player-photo" data-img="player-eeunji"></div>
+          <h3>이은지</h3>
+          <p class="player-team" data-i18n="players.p5.team">세종시청</p>
+          <p class="player-meta">2001.06.21</p>
+          <p class="player-tag" data-i18n="players.p5.tag">2026년 국가대표 상비군</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES / ALL-IN-ONE ===================== -->
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <p class="section-label">All-in-one Contents Village</p>
+      <h2 class="section-title reveal" data-i18n="svc.title">선수 · 팬 · 브랜드를 한 곳에서 연결합니다</h2>
+
+      <div class="svc-grid">
+        <article class="svc-card reveal">
+          <div class="svc-icon">🤝</div>
+          <h3 data-i18n="svc.s1.t">선수 매니지먼트</h3>
+          <p data-i18n="svc.s1.d">스폰서십 체결과 선수 활동 전반을 관리합니다.</p>
+        </article>
+        <article class="svc-card reveal">
+          <div class="svc-icon">🎾</div>
+          <h3 data-i18n="svc.s2.t">테니스 이벤트 기획·진행</h3>
+          <p data-i18n="svc.s2.d">대회·클래스·행사를 기획하고 현장을 운영합니다.</p>
+        </article>
+        <article class="svc-card reveal">
+          <div class="svc-icon">📡</div>
+          <h3 data-i18n="svc.s3.t">SNS · YOUTUBE 온라인 마케팅</h3>
+          <p data-i18n="svc.s3.d">롱폼·숏츠·릴스로 브랜드를 지속 노출·확산합니다.</p>
+        </article>
+      </div>
+
+      <div class="svc-banner reveal" data-i18n="svc.banner">선수, 팬, 브랜드를 한 곳에서 연결할 수 있는 구조 설계</div>
+    </div>
+  </section>
+
+  <!-- ===================== NETWORK ===================== -->
+  <section class="section" id="network">
+    <div class="container">
+      <p class="section-label">PRONOW Network</p>
+
+      <!-- Court -->
+      <div class="net-block reveal">
+        <h3 class="net-title accent" data-i18n="net.court.t">Tennis Court in Seoul</h3>
+        <p class="net-desc" data-i18n="net.court.d">365일 상시 사용할 수 있는 오프라인 전용 테니스 코트. 타겟 소비자에게 원하는 시기에 브랜드 인지 핵심 고객층과의 직접적인 만남을 제공합니다.</p>
+        <p class="net-addr">📍 <span data-i18n="net.court.addr">서울특별시 노원구 월계로 45가길 57</span></p>
+        <div class="court-grid">
+          <div class="court-photo" data-img="court-1"></div>
+          <div class="court-photo" data-img="court-2"></div>
+          <div class="court-photo" data-img="court-3"></div>
+        </div>
+      </div>
+
+      <!-- Scene Network -->
+      <div class="net-block reveal">
+        <h3 class="net-title accent" data-i18n="net.scene.t">Tennis Scene Network</h3>
+        <p class="net-desc" data-i18n="net.scene.d">협회·연맹·감독·선수·아카데미·인플루언서를 아우르는 테니스 네트워크로, 국내외 이벤트를 신속하게 추진합니다.</p>
+        <div class="logo-grid">
+          <div class="logo-cell"><span data-i18n="net.scene.kta">대한테니스협회</span></div>
+          <div class="logo-cell"><span data-i18n="net.scene.icta">인천광역시테니스협회</span></div>
+          <div class="logo-cell"><span data-i18n="net.scene.kptf">한국실업테니스연맹</span></div>
+          <div class="logo-cell"><span>ASICS</span></div>
+          <div class="logo-cell"><span>diadora</span></div>
+          <div class="logo-cell"><span>K·SWISS</span></div>
+          <div class="logo-cell"><span>HEAD</span></div>
+          <div class="logo-cell"><span>Babolat</span></div>
+          <div class="logo-cell"><span>ZAMST</span></div>
+          <div class="logo-cell"><span>WHAT A SHOT</span></div>
+          <div class="logo-cell"><span>오산GS</span></div>
+          <div class="logo-cell"><span>안산TA</span></div>
+        </div>
+      </div>
+
+      <!-- Online -->
+      <div class="net-block reveal">
+        <h3 class="net-title accent" data-i18n="net.online.t">Online Marketing Channel</h3>
+        <p class="net-desc" data-i18n="net.online.d">관심도 높은 브랜드·인플루언서와 협업해 공식 소셜 채널에서 다양한 콘텐츠를 제작·확산하고, 고관여 잠재 고객에게 상시 도달합니다. 단순 노출을 넘어 실제 구매로 이어지는 효율적인 브랜드 홍보 채널입니다.</p>
+        <div class="online-tags">
+          <span class="chip">YouTube</span>
+          <span class="chip">Instagram</span>
+          <span class="chip" data-i18n="net.online.long">롱폼</span>
+          <span class="chip" data-i18n="net.online.shorts">숏츠</span>
+          <span class="chip" data-i18n="net.online.reels">릴스</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HIGHLIGHTS / WORKS ===================== -->
+  <section class="section section-alt" id="works">
+    <div class="container">
+      <p class="section-label">PRONOW Highlights</p>
+      <h2 class="section-title reveal" data-i18n="works.title">프로나우의 활동</h2>
+
+      <div class="works-grid">
+        <article class="work-card reveal">
+          <div class="work-photo" data-img="work-sponsorship"></div>
+          <div class="work-body">
+            <h3 data-i18n="works.w1.t">선수 개인 의류 스폰서십 체결</h3>
+            <p data-i18n="works.w1.d">정윤성·박의성(ASICS), 한선용(diadora), 안유진·이은지(K·SWISS) — 국가대표 선수 의류 스폰서 계약 체결 및 업무 진행.</p>
+          </div>
+        </article>
+        <article class="work-card reveal">
+          <div class="work-photo" data-img="work-sns"></div>
+          <div class="work-body">
+            <h3 data-i18n="works.w2.t">SNS 콘텐츠 및 광고 촬영</h3>
+            <p data-i18n="works.w2.d">테니스 용품·보호대 브랜드와 협업해 SNS 콘텐츠를 촬영·업로드합니다.</p>
+          </div>
+        </article>
+        <article class="work-card reveal">
+          <div class="work-photo" data-img="work-event"></div>
+          <div class="work-body">
+            <h3 data-i18n="works.w3.t">동호인 대회 · 원데이 클래스</h3>
+            <p data-i18n="works.w3.d">WHAT A SHOT, ONE POINT TENNIS LESSON 등 체험형 콘텐츠로 고관여 고객을 확보하고 매출로 연결합니다.</p>
+          </div>
+        </article>
+        <article class="work-card reveal">
+          <div class="work-photo" data-img="work-mega"></div>
+          <div class="work-body">
+            <h3 data-i18n="works.w4.t">ITF · ATP · WTA 메가 이벤트 운영</h3>
+            <p data-i18n="works.w4.d">ITF W15~W100·M15/M25, WTA 125/250, ATP Challenger 등 세계적 대회를 기획·운영하고 스폰서십을 진행합니다.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="section" id="contact">
+    <div class="container contact-inner">
+      <p class="section-label">Contact</p>
+      <h2 class="section-title reveal" data-i18n="contact.title">제휴 · 협업 문의</h2>
+      <p class="section-lead reveal" data-i18n="contact.lead">브랜드 마케팅, 선수 스폰서십, 이벤트 협업을 언제든 제안해 주세요.</p>
+
+      <div class="contact-grid reveal">
+        <a class="contact-item" href="mailto:pronow.official@gmail.com">
+          <span class="contact-key" data-i18n="contact.email.k">이메일</span>
+          <span class="contact-val">pronow.official@gmail.com</span>
+        </a>
+        <a class="contact-item" href="tel:+82000000000">
+          <span class="contact-key" data-i18n="contact.tel.k">전화</span>
+          <span class="contact-val" data-i18n="contact.tel.v">대표번호 문의</span>
+        </a>
+        <div class="contact-item">
+          <span class="contact-key" data-i18n="contact.addr.k">주소</span>
+          <span class="contact-val" data-i18n="contact.addr.v">서울특별시 노원구 월계로 45가길 57</span>
+        </div>
+      </div>
+
+      <div class="contact-social reveal">
+        <a href="#" class="social-link" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" class="social-link" target="_blank" rel="noopener">YouTube</a>
+      </div>
+      <p class="contact-note" data-i18n="contact.note">※ SNS 링크와 대표번호는 확정되는 대로 연결됩니다.</p>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">PRONOW</div>
+      <p class="footer-tagline" data-i18n="footer.tagline">우리는 기록보다 기억에 남는 마케팅을 합니다.</p>
+      <p class="footer-info">
+        <span data-i18n="footer.company">프로나우(PRONOW)</span> ·
+        <span data-i18n="footer.ceo">대표 한동협</span> ·
+        <span data-i18n="footer.addr">서울특별시 노원구 월계로 45가길 57</span>
+      </p>
+      <p class="footer-copy">© 2026 PRONOW. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

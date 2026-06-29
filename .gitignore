@@ -1,0 +1,7 @@
+node_modules/
+.vercel
+.DS_Store
+*.log
+
+# 회사소개서 PDF는 저장소에 올리지 않음 (공개 노출 방지)
+*.pdf

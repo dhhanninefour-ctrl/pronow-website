@@ -1,0 +1,6 @@
+# 웹사이트 배포에서 제외 (외부 공개 안 함)
+*.pdf
+[프로나우] 회사소개서_F.pdf
+README.md
+.gitignore
+node_modules
