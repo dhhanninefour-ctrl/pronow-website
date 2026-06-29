@@ -229,6 +229,7 @@ a.contact-item:hover { border-color: var(--accent); transform: translateY(-4px);
 .contact-social { display: flex; gap: 16px; justify-content: center; margin-bottom: 14px; }
 .social-link { border: 1px solid var(--line-strong); border-radius: 999px; padding: 10px 24px; font-weight: 600; font-size: 14px; transition: background .2s, color .2s; }
 .social-link:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.social-link-pending { opacity: .4; cursor: default; pointer-events: none; }
 .contact-note { font-size: 13px; color: var(--text-dim); }
 
 /* ---------- footer ---------- */

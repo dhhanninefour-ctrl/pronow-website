@@ -88,7 +88,7 @@ const I18N = {
     "contact.tel.v": "대표번호 문의",
     "contact.addr.k": "주소",
     "contact.addr.v": "서울특별시 노원구 월계로 45가길 57",
-    "contact.note": "※ SNS 링크와 대표번호는 확정되는 대로 연결됩니다.",
+    "contact.note": "※ 유튜브 채널과 대표번호는 확정되는 대로 연결됩니다.",
 
     "footer.tagline": "우리는 기록보다 기억에 남는 마케팅을 합니다.",
     "footer.company": "프로나우(PRONOW)",
@@ -179,7 +179,7 @@ const I18N = {
     "contact.tel.v": "Contact for number",
     "contact.addr.k": "Address",
     "contact.addr.v": "57, Wolgye-ro 45ga-gil, Nowon-gu, Seoul",
-    "contact.note": "※ SNS links and the main phone number will be connected once finalized.",
+    "contact.note": "※ The YouTube channel and main phone number will be connected once finalized.",
 
     "footer.tagline": "Marketing that is remembered, not just recorded.",
     "footer.company": "PRONOW",
