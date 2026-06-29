@@ -37,6 +37,31 @@
 - **자동 배포:** 이 저장소에 `git push` 하면 **Vercel이 자동으로 빌드·배포**합니다.
   즉, 코드를 수정하고 push만 하면 위 주소가 자동으로 갱신됩니다.
 
+---
+
+## 🛠️ 관리자(직접 수정) 화면 — /admin
+
+코드를 몰라도 홈페이지의 **글자·사진·링크·아이콘**을 직접 수정할 수 있는 관리자 페이지입니다.
+
+- **주소:** https://pronowsportsagency.vercel.app/admin/
+- **로그인:** 이메일 `pronow25@gmail.com` + 비밀번호 (아래에서 직접 설정)
+- **비밀번호 분실 시:** 로그인 화면의 "비밀번호를 잊으셨나요?" → 메일로 받은 링크에서 새 비밀번호 설정
+- **비밀번호 변경:** 로그인 후 `🔒 계정` 탭에서 변경
+- **저장하면** 잠시 뒤 라이브 사이트에 자동 반영됩니다 (다시 배포할 필요 없음).
+
+### 처음 한 번 — 관리자 계정 만들기
+1. Supabase 로그인 → 프로젝트 **"Tennis"** (PRONOW 전용으로 재사용) → Authentication → Users
+2. **Add user → Create new user** → 이메일 `pronow25@gmail.com` + 원하는 비밀번호(6자 이상) 입력
+3. **"Auto confirm user?" 체크 유지** → **Create user**
+4. 이제 `/admin/` 에서 그 이메일·비밀번호로 로그인하면 됩니다.
+
+### 백엔드(Supabase) 정보
+- **프로젝트:** `Tennis` (ref `vnznkvvcssuqwptrzzvy`) — ⚠️ 이름은 "Tennis"지만 **테니스 예약 앱과 무관**, PRONOW 홈페이지 전용입니다.
+- **테니스 예약 앱**은 같은 계정의 **다른 프로젝트**(`dhhanninefour-ctrl's Project`)를 사용하며, 이 작업에서 **전혀 건드리지 않았습니다.**
+- 콘텐츠 저장: `site_content` 테이블(JSON 한 줄) · 사진 저장: `site-images` 버킷
+- 무료 플랜으로 운영(추가 결제 없음).
+- 연결 설정은 `js/supabase-config.js` 에 있습니다 (공개되어도 안전한 키 — 데이터는 RLS 보안으로 보호).
+
 ### 코드 수정 후 반영하는 법
 ```bash
 git add .
