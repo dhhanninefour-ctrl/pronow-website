@@ -9,6 +9,15 @@
   var CFG = window.PRONOW_SUPABASE;
   var sb = window.supabase.createClient(CFG.url, CFG.key);
 
+  // Supabase logs in with an email, but the user wants to type "admin".
+  // Map simple usernames to the real account email behind the scenes.
+  var ID_MAP = { "admin": "pronow25@gmail.com" };
+  function resolveEmail(id) {
+    id = (id || "").trim();
+    if (id.indexOf("@") !== -1) return id;            // already an email
+    return ID_MAP[id.toLowerCase()] || id;            // map "admin" -> real email
+  }
+
   // ---- which top-level i18n section maps to which friendly title ----
   var GROUPS = {
     meta:    "검색 / SEO",
@@ -102,9 +111,9 @@
   });
 
   function doLogin() {
-    var email = $("loginEmail").value.trim();
+    var email = resolveEmail($("loginEmail").value);
     var pw = $("loginPassword").value;
-    if (!email || !pw) { setMsg($("loginMsg"), "이메일과 비밀번호를 입력하세요.", "err"); return; }
+    if (!email || !pw) { setMsg($("loginMsg"), "아이디와 비밀번호를 입력하세요.", "err"); return; }
     setMsg($("loginMsg"), "로그인 중…");
     sb.auth.signInWithPassword({ email: email, password: pw }).then(function (res) {
       if (res.error) { setMsg($("loginMsg"), "로그인 실패: " + res.error.message, "err"); return; }
@@ -114,7 +123,8 @@
   }
 
   function doForgot() {
-    var email = $("loginEmail").value.trim() || LINK_DEFAULTS.email;
+    var email = resolveEmail($("loginEmail").value) || LINK_DEFAULTS.email;
+    if (email.indexOf("@") === -1) email = LINK_DEFAULTS.email; // "admin" with no mapping -> company email
     setMsg($("loginMsg"), email + " 으로 복구 메일을 보내는 중…");
     var redirect = location.origin + location.pathname;
     sb.auth.resetPasswordForEmail(email, { redirectTo: redirect }).then(function (res) {
