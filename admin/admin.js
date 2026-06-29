@@ -211,7 +211,7 @@
 
   function slotPreviewUrl(name) {
     if (pendingImages[name]) return pendingImages[name];
-    return "../assets/images/" + name + ".jpg";
+    return "/assets/images/" + name + ".jpg";
   }
 
   function buildImages() {
