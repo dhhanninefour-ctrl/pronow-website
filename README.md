@@ -47,6 +47,41 @@ git push
 
 ---
 
+## 🖥️ 다른 컴퓨터에서 이어서 작업하기
+
+이 프로젝트의 모든 것은 **클라우드(GitHub + Vercel)** 에 있습니다. 어느 컴퓨터에서든 이어갈 수 있어요.
+(주의: AI 대화 기록은 컴퓨터 간 자동 이전되지 않습니다. 하지만 이 README와 코드를 보면 맥락 파악이 됩니다.)
+
+### 핵심 정보 (북마크 해두세요)
+- 라이브 사이트: **https://pronowsportsagency.vercel.app/**
+- GitHub 저장소: **https://github.com/dhhanninefour-ctrl/pronow-website**
+- Vercel 프로젝트: `pronow-website` (도메인 `pronowsportsagency.vercel.app`)
+- 계정: GitHub `dhhanninefour-ctrl` / Vercel·Claude `dhhanninefour@gmail.com`
+
+### 방법 A — 설치 없이 (가장 간단)
+1. 새 컴퓨터 브라우저에서 GitHub 로그인
+2. 위 GitHub 저장소에서 파일을 직접 수정 → 저장(Commit)
+3. → Vercel이 자동 배포. 끝.
+
+### 방법 B — 컴퓨터에 제대로 세팅
+1. **Git 설치** → https://git-scm.com (첫 push 때 GitHub 로그인 창 뜨면 승인)
+2. **저장소 내려받기:**
+   ```bash
+   git clone https://github.com/dhhanninefour-ctrl/pronow-website.git
+   ```
+3. (선택) **Node.js 설치** → 로컬 미리보기(`npx serve .`)나 이미지 작업 시
+4. 수정 후 반영:
+   ```bash
+   git add .
+   git commit -m "메모"
+   git push
+   ```
+5. (선택) **Claude Code 설치** 후 `claude.ai` 계정(Max)으로 로그인 → 이 폴더에서 "이건 PRONOW 회사 홈페이지야"라고 말하면 README·코드를 읽고 이어서 도와줍니다.
+
+> 새 컴퓨터든 이 컴퓨터든, 앞으로 "프로젝트 설정"은 다시 할 필요 없습니다. **수정 → push → 자동 배포** 뿐입니다.
+
+---
+
 ## 3. (참고) Vercel CLI로 직접 배포하는 방법
 
 > 위 GitHub 자동 배포가 이미 동작하므로 보통 이 방법은 필요 없습니다. 참고용입니다.
